@@ -3,20 +3,15 @@ package com.appdirect.logs;
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-/**
- * Created by alex.ardelean on 20/04/16.
- */
-@Entity
+
+@Document
 public class Log implements Serializable{
 
 	@Id
-	@GeneratedValue(strategy= GenerationType.AUTO)
-	private Long id;
+	private String id;
 
 	private String content;
 
@@ -40,11 +35,11 @@ public class Log implements Serializable{
 		this.created = created;
 	}
 
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
