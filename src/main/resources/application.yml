@@ -1,8 +1,8 @@
 server:
-  port: 9000
+  port: 9200
 spring:
   data:
     mongodb:
-      host: mongo
-      database: themes
+      host: 85.183.142.228
+      database: logs
       port: 27017
